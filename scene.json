@@ -52,12 +52,21 @@
 	[
 		{
 			"disablepropagation" : false,
+			"id" : 17,
+			"image" : "models/c21RG4A - Imgur (1).json",
+			"locktransforms" : true,
+			"name" : "基础图层",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"size" : "3840.00000 2160.00000"
+		},
+		{
+			"disablepropagation" : false,
 			"effects" :
 			[
 				{
 					"file" : "effects/chromaticaberration/effect.json",
-					"id" : 108,
-					"name" : "",
+					"id" : 301,
+					"name" : "色差",
 					"passes" :
 					[
 						{
@@ -65,38 +74,50 @@
 							{
 								"ui_editor_properties_center" : "0.5 0.5",
 								"ui_editor_properties_center_falloff" : 1.0,
-								"ui_editor_properties_strength" : 1.0
+								"ui_editor_properties_strength" : 3.0
 							},
-							"id" : 109,
+							"id" : 302,
 							"textures" : [ null, "masks/chromatic_aberration_mask_02e4b27e" ]
 						}
 					],
 					"visible" : true
-				},
+				}
+			],
+			"id" : 300,
+			"image" : "models/c21RG4A - Imgur (1).json",
+			"locktransforms" : true,
+			"name" : "色差叠加层 (最大强度3.0)",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"size" : "3840.00000 2160.00000"
+		},
+		{
+			"disablepropagation" : false,
+			"effects" :
+			[
 				{
 					"file" : "effects/workshop/2128373241/waterripple/effect.json",
-					"id" : 203,
+					"id" : 303,
 					"name" : "水波纹",
 					"passes" :
 					[
 						{
 							"constantshadervalues" :
 							{
-								"ripplestrength" : 0.12,
-								"ripplespecularstrength" : 0.5,
+								"ripplestrength" : 0.5,
+								"ripplespecularstrength" : 1.0,
 								"ripplespecularpower" : 30.0,
 								"ripplespecularcolor" : "0.6 0.7 0.8"
 							},
-							"id" : 204
+							"id" : 304
 						}
 					],
 					"visible" : true
 				}
 			],
-			"id" : 17,
+			"id" : 305,
 			"image" : "models/c21RG4A - Imgur (1).json",
 			"locktransforms" : true,
-			"name" : "c21RG4A - Imgur (1)",
+			"name" : "水波叠加层 (最大强度0.5)",
 			"origin" : "1920.00000 1080.00000 0.00000",
 			"size" : "3840.00000 2160.00000"
 		},
