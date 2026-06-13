@@ -1,0 +1,17 @@
+{
+	"passes" : 
+	[
+		{
+			"blending" : "translucent",
+			"combos" : {},
+			"cullmode" : "nocull",
+			"depthtest" : "disabled",
+			"depthwrite" : "disabled",
+			"shader" : "genericimage4",
+			"textures" : 
+			[
+				"workshop/2978738836/flag-indonesia-ribbon-vector-illustration_1254296-2948"
+			]
+		}
+	]
+}

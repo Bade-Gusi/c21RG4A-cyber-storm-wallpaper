@@ -1,0 +1,18 @@
+{
+	"dependencies" : 
+	[
+		"materials/workshop/3373140814/effects/gradientopacity.json",
+		"shaders/workshop/3373140814/effects/gradientopacity.frag",
+		"shaders/workshop/3373140814/effects/gradientopacity.vert"
+	],
+	"group" : "localeffects",
+	"name" : "gradientOpacity",
+	"passes" : 
+	[
+		{
+			"material" : "materials/workshop/3373140814/effects/gradientopacity.json"
+		}
+	],
+	"replacementkey" : "gradientopacity",
+	"version" : 1
+}

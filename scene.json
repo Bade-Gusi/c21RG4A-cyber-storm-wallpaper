@@ -1,0 +1,495 @@
+{
+	"script" : "scripts/main.js",
+	"camera" :
+	{
+		"center" : "0.00000 0.00000 -1.00000",
+		"eye" : "0.00000 0.00000 0.00000",
+		"up" : "0.00000 1.00000 0.00000"
+	},
+	"general" :
+	{
+		"ambientcolor" : "0.30000 0.30000 0.30000",
+		"bloom" : true,
+		"bloomhdrfeather" : 0.1,
+		"bloomhdriterations" : 8,
+		"bloomhdrscatter" : 1.0,
+		"bloomhdrstrength" : 1.2,
+		"bloomhdrthreshold" : 1.0,
+		"bloomstrength" : 1.0,
+		"bloomthreshold" : 0.7,
+		"bloomtint" : "1.00000 1.00000 1.00000",
+		"camerafade" : true,
+		"cameraparallax" : false,
+		"cameraparallaxamount" : 0.5,
+		"cameraparallaxdelay" : 0.1,
+		"cameraparallaxmouseinfluence" : 0.5,
+		"camerapreview" : true,
+		"camerashake" : false,
+		"camerashakeamplitude" : 0.5,
+		"camerashakeroughness" : 1.0,
+		"camerashakespeed" : 0.0,
+		"clearcolor" : "0.70000 0.70000 0.70000",
+		"clearenabled" : true,
+		"farz" : 10000.0,
+		"fov" : 50.0,
+		"gravitydirection" : "0.00000 -1.00000 0.00000",
+		"gravitystrength" : 1.0,
+		"hdr" : false,
+		"nearz" : 0.0099999998,
+		"orthogonalprojection" :
+		{
+			"height" : 2160,
+			"width" : 3840
+		},
+		"perspectiveoverridefov" : 90.0,
+		"skylightcolor" : "0.30000 0.30000 0.30000",
+		"winddirection" : "0.70700 1.00000 0.00000",
+		"windenabled" : true,
+		"windstrength" : 1.5,
+		"zoom" : 1.0
+	},
+	"objects" :
+	[
+		{
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/chromaticaberration/effect.json",
+					"id" : 108,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"ui_editor_properties_center" : "0.5 0.5",
+								"ui_editor_properties_center_falloff" : 1.0,
+								"ui_editor_properties_strength" : 1.0
+							},
+							"id" : 109,
+							"textures" : [ null, "masks/chromatic_aberration_mask_02e4b27e" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/workshop/2128373241/waterripple/effect.json",
+					"id" : 203,
+					"name" : "水波纹",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"ripplestrength" : 0.12,
+								"ripplespecularstrength" : 0.5,
+								"ripplespecularpower" : 30.0,
+								"ripplespecularcolor" : "0.6 0.7 0.8"
+							},
+							"id" : 204
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 17,
+			"image" : "models/c21RG4A - Imgur (1).json",
+			"locktransforms" : true,
+			"name" : "c21RG4A - Imgur (1)",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"size" : "3840.00000 2160.00000"
+		},
+		{
+			"angles" : "-0.00000 -0.00000 -0.11246",
+			"disablepropagation" : false,
+			"id" : 30,
+			"instanceoverride" :
+			{
+				"alpha" : 0.30,
+				"id" : 31
+			},
+			"name" : "暴雨",
+			"origin" : "1920.00000 1500.00000 0.00000",
+			"particle" : "particles/workshop/2128373241/presets/raindownpour.json",
+			"scale" : "4.00000 1.20000 1.00000",
+			"solid" : true
+		},
+		{
+			"angles" : "0.00000 -0.00000 0.33724",
+			"color" : "0.23922 0.38824 0.58039",
+			"colorBlendMode" : 9,
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/skew/effect.json",
+					"id" : 57,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"combos" :
+							{
+								"REPEAT" : 0
+							},
+							"constantshadervalues" :
+							{
+								"bottom" : -0.2,
+								"left" : 0.03,
+								"right" : 0.0,
+								"top" : 0
+							},
+							"id" : 58
+						}
+					],
+					"visible" : true
+				}
+			],
+			"font" : "fonts/Alcubierre.otf",
+			"horizontalalign" : "center",
+			"id" : 46,
+			"limitrows" : false,
+			"limituseellipsis" : false,
+			"limitwidth" : false,
+			"maxrows" : 1,
+			"maxwidth" : 500.0,
+			"name" : "Clock",
+			"origin" : "2443.96191 1743.48950 0.00000",
+			"padding" : "29.00000 29.00000",
+			"pointsize" : 33.0,
+			"scale" : "1.74970 1.65812 1.33470",
+			"size" : "355.04001 226.25999",
+			"spacing" : "7.26000 7.26000",
+			"text" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '2760603383';\n\nexport var scriptProperties = createScriptProperties()\n\t// Whether you want a 24h or 12h style format\n\t.addCheckbox({\n\t\tname: 'use24hFormat',\n\t\tlabel: 'ui_editor_properties_use_24h_format',\n\t\tvalue: true\n\t})\n\t// Whether you want to see the seconds or not\n\t.addCheckbox({\n\t\tname: 'showSeconds',\n\t\tlabel: 'ui_editor_properties_show_seconds',\n\t\tvalue: false\n\t})\n\t// This will be used to separate each element\n\t.addText({\n\t\tname: 'delimiter',\n\t\tlabel: 'ui_editor_properties_delimiter',\n\t\tvalue: ':'\n\t})\n\t.finish();\n\n/**\n * @param {String} value (for property 'text')\n */\nexport function update(value) {\n\tlet time = new Date();\n\tvar hours = time.getHours();\n\tif (!scriptProperties.use24hFormat) {\n\t\thours %= 12;\n\t\tif (hours == 0) {\n\t\t\thours = 12;\n\t\t}\n\t}\n\thours = (\"00\" + hours).slice(-2);\n\tlet minutes = (\"00\" + time.getMinutes()).slice(-2);\n\tvalue = hours + scriptProperties.delimiter + minutes;\n\tif (scriptProperties.showSeconds) {\n\t\tlet seconds = (\"00\" + time.getSeconds()).slice(-2);\n\t\tvalue += scriptProperties.delimiter + seconds;\n\t}\n\treturn value;\n}\n",
+				"scriptproperties" :
+				{
+					"delimiter" : ":",
+					"showSeconds" : false,
+					"use24hFormat" : true
+				},
+				"value" : "12:34"
+			},
+			"verticalalign" : "center"
+		},
+		{
+			"alpha" : 0.0,
+			"angles" : "0.00000 -0.00000 0.31863",
+			"colorBlendMode" : 22,
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/workshop/3578699527/audioline/effect.json",
+					"id" : 70,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"中心突出度" : 1,
+								"中心突出强度" : 0.69999999,
+								"中心聚集度 (值越大越尖锐)" : 2,
+								"包络线陡峭度" : 2.33,
+								"区域颜色" : "1.0 1.0 0.0",
+								"垂直位置" : 0,
+								"垂直位置 (基线)" : 0,
+								"对数强度" : 1,
+								"整体振幅" : 0.45,
+								"整体振幅 (从0开始慢慢调大)" : 0.1,
+								"曲线平滑度" : 0.001,
+								"曲线平滑度 (抗锯齿)" : 0.001,
+								"曲线粗细" : 0.001,
+								"曲线透明度" : 1,
+								"曲线颜色" : "1 1 1",
+								"条形宽度" : 0.1,
+								"频率范围 (0-63)" : 31,
+								"频率范围 (0-最大频段)" : 63,
+								"频谱颜色" : "1.0 1.0 1.0"
+							},
+							"id" : 0
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 69,
+			"image" : "models/util/solidlayer_depthtest.json",
+			"name" : "音频线Audio Spectrum Visualizer",
+			"origin" : "1830.52930 1432.59216 0.00000",
+			"parallaxDepth" : "0.00000 0.00000",
+			"scale" : "1.76730 0.83818 0.10000",
+			"size" : "1000.00000 1000.00000"
+		},
+		{
+			"alpha" : 0.0,
+			"angles" : "0.00000 0.00000 0.31863",
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/workshop/3578699527/audioline/effect.json",
+					"id" : 113,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"中心突出度" : 1,
+								"中心突出强度" : 0.69999999,
+								"中心聚集度 (值越大越尖锐)" : 2,
+								"包络线陡峭度" : 2.23,
+								"区域颜色" : "1.0 1.0 0.0",
+								"垂直位置" : 0,
+								"垂直位置 (基线)" : 0,
+								"对数强度" : 1,
+								"整体振幅" : 0.21,
+								"整体振幅 (从0开始慢慢调大)" : 0.1,
+								"曲线平滑度" : 0.001,
+								"曲线平滑度 (抗锯齿)" : 0.001,
+								"曲线粗细" : 0.005,
+								"曲线透明度" : 1,
+								"曲线颜色" : "1 1 1",
+								"条形宽度" : 0.1,
+								"频率范围 (0-63)" : 31,
+								"频率范围 (0-最大频段)" : 63,
+								"频谱颜色" : "1.0 1.0 1.0"
+							},
+							"id" : 114
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 112,
+			"image" : "models/util/solidlayer_depthtest.json",
+			"name" : "音频线Audio Spectrum Visualizer",
+			"origin" : "1817.81384 1432.59229 0.00000",
+			"parallaxDepth" : "0.00000 0.00000",
+			"scale" : "1.76730 0.83818 0.10000",
+			"size" : "1000.00000 1000.00000"
+		},
+		{
+			"angles" : "0.00000 -0.00000 0.31854",
+			"brightness" : 1.98,
+			"color" : "0.29412 0.62353 0.94902",
+			"colorBlendMode" : 9,
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/workshop/2981960200/blurprecise/effect.json",
+					"id" : 118,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"scale" : "1.33 1.33"
+							},
+							"id" : 119
+						},
+						{
+							"combos" :
+							{
+								"ENABLEMASK" : 1,
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" :
+							{
+								"scale" : "1.33 1.33"
+							},
+							"id" : 120
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/skew/effect.json",
+					"id" : 84,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"combos" :
+							{
+								"REPEAT" : 0
+							},
+							"constantshadervalues" :
+							{
+								"bottom" : -0.16,
+								"left" : 0.0,
+								"right" : 0.0,
+								"top" : 0.0
+							},
+							"id" : 86
+						}
+					],
+					"visible" : true
+				}
+			],
+			"font" : "fonts/Alcubierre.otf",
+			"horizontalalign" : "center",
+			"id" : 117,
+			"limitrows" : false,
+			"limituseellipsis" : false,
+			"limitwidth" : false,
+			"maxrows" : 1,
+			"maxwidth" : 500.0,
+			"name" : "Date",
+			"origin" : "2432.23755 1564.97888 0.00000",
+			"padding" : "112.00000 112.00000",
+			"pointsize" : 65.0,
+			"scale" : "0.31731 0.30580 0.44841",
+			"size" : "1097.00000 557.00000",
+			"spacing" : "16.00000 16.00000",
+			"text" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '2981960200';\n// Please note: Do not remove this line or asset references may break.\n// Please note: Do not remove this line or asset references may break.\n\n\nexport var scriptProperties = createScriptProperties()\n\t.addCombo({\n\t\tname: 'monthFormat',\n\t\tlabel: 'Month Format',\n\t\toptions: [{\n\t\t\tlabel: 'Numeric',\n\t\t\tvalue: '1'\n\t\t}, {\n\t\t\tlabel: 'Abbreviated',\n\t\t\tvalue: '2'\n\t\t},{\n\t\t\tlabel: 'Full',\n\t\t\tvalue: '3'\n\t\t}]\n\t})\n\t.addCombo({\n\t\tname: 'dayFormat',\n\t\tlabel: 'Day Format',\n\t\toptions: [{\n\t\t\tlabel: 'Abbreviated',\n\t\t\tvalue: '1'\n\t\t}, {\n\t\t\tlabel: 'Full',\n\t\t\tvalue: '2'\n\t\t}]\n\t})\n\t.addCheckbox({\n\t\tname: 'showDay',\n\t\tlabel: 'Show Day',\n\t\tvalue: false\n\t})\n   .addCheckbox({\n\t\tname: 'alignVertical',\n\t\tlabel: 'Align Day Vertically',\n\t\tvalue: false\n\t})\n  .addCheckbox({\n\t\tname: 'useDelimiter',\n\t\tlabel: 'Use Delimiter',\n\t\tvalue: false\n\t})\n\t.addText({\n\t\tname: 'addDelimiter',\n\t\tlabel: 'Delimiter',\n\t\tvalue: '/'\n\t})\n\t.finish();\n\n\nlet months;\nlet day;\nvar delimiterValue;\nvar newLine;\n/**\n * @param {String} value (for property 'text')\n */\nexport function update(value){\n  if (scriptProperties.useDelimiter == true){\n  delimiterValue = scriptProperties.addDelimiter\n}\n  if (scriptProperties.useDelimiter == false){\n   delimiterValue = [\n  ' '\n]\n}\nif (scriptProperties.alignVertical == true){\n   newLine = [\n  '\\n'\n]\n}\nif (scriptProperties.alignVertical == false){\n   newLine = [\n  ''\n]\n}\n  if (scriptProperties.monthFormat == 1){\n  months = [\n  '1',\n  '2',\n  '3',\n  '4',\n  '5',\n  '6',\n  '7',\n  '8',\n  '9',\n  '10',\n  '11',\n  '12'\n]\n}\n if (scriptProperties.monthFormat == 2){\n months = [\n  ' JAN ',\n  ' FEB ',\n  ' MAR ',\n  ' APR ',\n  ' MAY ',\n  ' JUN ',\n  ' JUL ',\n  ' AUG ',\n  ' SEP ',\n  ' OCT ',\n  ' NOV ',\n  ' DEC '\n]\n}\nif (scriptProperties.monthFormat == 3){\n months = [\n  'January',\n  'February',\n  'March',\n  'April',\n  'May',\n  'June',\n  'July',\n  'August',\n  'September',\n  'October',\n  'November',\n  'December'\n]\n}\nif (scriptProperties.dayFormat == 1){\n  day = [\n  'Sun',\n  'Mon',\n  'Tue',\n  'Wed',\n  'Thu',\n  'Fri',\n  '\\nSat'\n]\n}\nif (scriptProperties.dayFormat == 2){\n day = [\n  'Sunday',\n  'Monday',\n  'Tuesday',\n  'Wednesday',\n  'Thursday',\n  'Friday',\n  '\\nSaturday'\n]\n}\n\tlet date = new Date();{\n    if (scriptProperties.showDay == true ){\n    return day[date.getDay()] + newLine + ' ' + date.getDate() + delimiterValue + months[date.getMonth()] + delimiterValue + date.getFullYear();\n    }\n    if (scriptProperties.showDay == false ){\n\treturn   date.getDate() + delimiterValue + months[date.getMonth()] + delimiterValue + date.getFullYear();\n}\n}\n}\n",
+				"scriptproperties" :
+				{
+					"addDelimiter" : "",
+					"alignVertical" : false,
+					"dayFormat" : "2",
+					"monthFormat" : "3",
+					"showDay" : false,
+					"useDelimiter" : true
+				},
+				"value" : "<Date>"
+			},
+			"verticalalign" : "center"
+		},
+		{
+			"disablepropagation" : false,
+			"id" : 166,
+			"name" : "𝗠𝗲𝗱𝗶𝗮 𝗜𝗻𝗳𝗼. 𝗦𝗶𝗺𝗽𝗹𝗲 (𝗟𝗲𝗳𝘁)",
+			"origin" : "2646.62354 1773.57385 0.00000",
+			"solid" : true
+		},
+		{
+			"angles" : "0.00000 -0.00000 0.00000",
+			"blockalign" : true,
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/skew/effect.json",
+					"id" : 220,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"bottom" : 0.04,
+								"left" : 0.5,
+								"right" : 0,
+								"top" : 0
+							},
+							"id" : 221
+						}
+					],
+					"visible" : true
+				}
+			],
+			"font" : "fonts/workshop/3651835769/nasalization.otf",
+			"horizontalalign" : "left",
+			"id" : 171,
+			"limitrows" : true,
+			"limituseellipsis" : true,
+			"limitwidth" : true,
+			"maxrows" : 1,
+			"maxwidth" : 500.0,
+			"name" : "𝙎𝙤𝙣𝙜 𝙏𝙞𝙩𝙡𝙚 (𝙇𝙚𝙛𝙩)",
+			"origin" : "44.00562 -8.96851 0.00000",
+			"padding" : "80.00000 80.00000",
+			"parent" : 166,
+			"pointsize" : 12.0,
+			"scale" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '3651835769';\n\nimport * as WEMath from 'WEMath';\n\nexport var scriptProperties = createScriptProperties()\n    .addCheckbox({\n        name: 'enableScale',\n        label: 'Enable Zoom When Hovering The Cursor // Habilitar zoom al pasar el cursor',\n        value: true\n    })\n    .addSlider({\n        name: 'hoScale',\n        label: 'Hover over scale multiplier // Aumento de la escala al pasar el cursor',\n        value: 1.5,\n        min: 0.1,\n        max: 2,\n        integer: false\n    })\n    .addSlider({\n        name: 'speed',\n        label: 'Scale change speed // Velocidad de cambio de escala',\n        value: 10,\n        min: 1,\n        max: 100,\n        integer: false\n    })\n    .finish();\n\nlet initScale, newScale, hover = false, propertyCheck = true, speed;\n\nexport function update(value) {\n\n    // ❌ Si el checkbox está apagado → no hay efecto\n    if (!scriptProperties.enableScale) {\n        return value;\n    }\n\n    // ✔ Hover activo\n    if (hover) {\n        value = new Vec3(\n            WEMath.mix(value.x, newScale.x, speed),\n            WEMath.mix(value.y, newScale.y, speed),\n            WEMath.mix(value.z, newScale.z, speed)\n        );\n    }\n    // ✔ Hover desactivado → vuelve al tamaño original\n    else {\n        value = new Vec3(\n            WEMath.mix(value.x, initScale.x, speed),\n            WEMath.mix(value.y, initScale.y, speed),\n            WEMath.mix(value.z, initScale.z, speed)\n        );\n    }\n\n    return value;\n}\n\nexport function init(value) {\n    initScale = value;\n    return value;\n}\n\nexport function cursorEnter(event) {\n    if (scriptProperties.enableScale) hover = true;\n}\n\nexport function cursorLeave(event) {\n    hover = false;\n}\n\nexport function applyUserProperties(changedUserProperties) {\n\n    if (!scriptProperties.enableScale) return;\n\n    if (scriptProperties.hoScale != undefined && propertyCheck) {\n        newScale = new Vec3(initScale.multiply(scriptProperties.hoScale));\n        speed = scriptProperties.speed / 100;\n        propertyCheck = false;\n    }\n}\n",
+				"scriptproperties" :
+				{
+					"enableScale" : true,
+					"hoScale" : 1.1,
+					"speed" : 10
+				},
+				"value" : "1.00000 1.00000 1.00000"
+			},
+			"size" : "410.00000 219.00000",
+			"spacing" : "0.00000 0.00000",
+			"text" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '3651835769';\n// Please note: Do not remove this line or asset references may break.\n\nvar mediaData = \"\";\n\n/**\n * @param {String} value - for property 'text'\n * @return {String} - update current property value\n */\nexport function update(value) {\n\treturn mediaData;\n}\n\n/**\n * @param {MediaPropertiesEvent} event\n */\nexport function mediaPropertiesChanged(event) {\n\tmediaData = event.title;\n}\n",
+				"value" : "Song Title"
+			},
+			"verticalalign" : "center"
+		},
+		{
+			"alpha" : 0.80000001,
+			"angles" : "0.00000 -0.00000 0.00000",
+			"blockalign" : true,
+			"disablepropagation" : false,
+			"effects" :
+			[
+				{
+					"file" : "effects/skew/effect.json",
+					"id" : 211,
+					"name" : "",
+					"passes" :
+					[
+						{
+							"constantshadervalues" :
+							{
+								"bottom" : 0.04,
+								"left" : 0.5,
+								"right" : 0,
+								"top" : 0
+							},
+							"id" : 212
+						}
+					],
+					"visible" : true
+				}
+			],
+			"font" : "fonts/workshop/3651835769/nasalization.otf",
+			"horizontalalign" : "left",
+			"id" : 172,
+			"limitrows" : true,
+			"limituseellipsis" : true,
+			"limitwidth" : true,
+			"maxrows" : 1,
+			"maxwidth" : 400.0,
+			"name" : "𝘼𝙧𝙩𝙞𝙨𝙩 𝙏𝙞𝙩𝙡𝙚 (𝙇𝙚𝙛𝙩)",
+			"origin" : "44.00562 -54.97205 0.00000",
+			"padding" : "80.00000 80.00000",
+			"parent" : 166,
+			"pointsize" : 8.0,
+			"scale" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '3651835769';\n\nimport * as WEMath from 'WEMath';\n\nexport var scriptProperties = createScriptProperties()\n    .addCheckbox({\n        name: 'enableScale',\n        label: 'Enable Zoom When Hovering The Cursor // Habilitar zoom al pasar el cursor',\n        value: true\n    })\n    .addSlider({\n        name: 'hoScale',\n        label: 'Hover over scale multiplier // Aumento de la escala al pasar el cursor',\n        value: 1.5,\n        min: 0.1,\n        max: 2,\n        integer: false\n    })\n    .addSlider({\n        name: 'speed',\n        label: 'Scale change speed // Velocidad de cambio de escala',\n        value: 10,\n        min: 1,\n        max: 100,\n        integer: false\n    })\n    .finish();\n\nlet initScale, newScale, hover = false, propertyCheck = true, speed;\n\nexport function update(value) {\n\n    // ❌ Si el checkbox está apagado → no hay efecto\n    if (!scriptProperties.enableScale) {\n        return value;\n    }\n\n    // ✔ Hover activo\n    if (hover) {\n        value = new Vec3(\n            WEMath.mix(value.x, newScale.x, speed),\n            WEMath.mix(value.y, newScale.y, speed),\n            WEMath.mix(value.z, newScale.z, speed)\n        );\n    }\n    // ✔ Hover desactivado → vuelve al tamaño original\n    else {\n        value = new Vec3(\n            WEMath.mix(value.x, initScale.x, speed),\n            WEMath.mix(value.y, initScale.y, speed),\n            WEMath.mix(value.z, initScale.z, speed)\n        );\n    }\n\n    return value;\n}\n\nexport function init(value) {\n    initScale = value;\n    return value;\n}\n\nexport function cursorEnter(event) {\n    if (scriptProperties.enableScale) hover = true;\n}\n\nexport function cursorLeave(event) {\n    hover = false;\n}\n\nexport function applyUserProperties(changedUserProperties) {\n\n    if (!scriptProperties.enableScale) return;\n\n    if (scriptProperties.hoScale != undefined && propertyCheck) {\n        newScale = new Vec3(initScale.multiply(scriptProperties.hoScale));\n        speed = scriptProperties.speed / 100;\n        propertyCheck = false;\n    }\n}\n",
+				"scriptproperties" :
+				{
+					"enableScale" : true,
+					"hoScale" : 1.2,
+					"speed" : 10
+				},
+				"value" : "1.00000 1.00000 1.00000"
+			},
+			"size" : "366.00000 200.00000",
+			"spacing" : "0.00000 0.00000",
+			"text" :
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '3651835769';\n// Please note: Do not remove this line or asset references may break.\n\nvar mediaData = \"\";\n\n/**\n * @param {String} value - for property 'text'\n * @return {String} - update current property value\n */\nexport function update(value) {\n\treturn mediaData;\n}\n\n/**\n * @param {MediaPropertiesEvent} event\n */\nexport function mediaPropertiesChanged(event) {\n\tmediaData = event.artist;\n}\n",
+				"value" : "Artist Name"
+			},
+			"verticalalign" : "center"
+		}
+	],
+	"version" : 5
+}

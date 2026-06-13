@@ -1,0 +1,32 @@
+{
+	"dependencies" : 
+	[
+		"materials/workshop/2874761468/effects/change_3d_02.json",
+		"shaders/workshop/2874761468/effects/change_3d_02.frag",
+		"shaders/workshop/2874761468/effects/change_3d_02.vert"
+	],
+	"editable" : false,
+	"gizmos" : 
+	[
+		{
+			"type" : "EffectPerspectiveUV",
+			"vars" : 
+			{
+				"p0" : "point0",
+				"p1" : "point1",
+				"p2" : "point2",
+				"p3" : "point3"
+			}
+		}
+	],
+	"group" : "localeffects",
+	"name" : "change 3D 02",
+	"passes" : 
+	[
+		{
+			"material" : "materials/workshop/2874761468/effects/change_3d_02.json"
+		}
+	],
+	"replacementkey" : "change_3d_02",
+	"version" : 2
+}

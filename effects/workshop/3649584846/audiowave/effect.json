@@ -1,0 +1,19 @@
+{
+	"dependencies" : 
+	[
+		"materials/workshop/3649584846/effects/audiowave.json",
+		"shaders/workshop/3649584846/effects/audiowave.frag",
+		"shaders/workshop/3649584846/effects/audiowave.vert"
+	],
+	"editable" : false,
+	"group" : "localeffects",
+	"name" : "audiowave",
+	"passes" : 
+	[
+		{
+			"material" : "materials/workshop/3649584846/effects/audiowave.json"
+		}
+	],
+	"replacementkey" : "audiowave",
+	"version" : 1
+}
