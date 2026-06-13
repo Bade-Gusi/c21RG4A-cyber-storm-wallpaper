@@ -5,139 +5,119 @@
 	{
 		"properties" :
 		{
-			"schemecolor" :
+			"---divider_main---" :
 			{
-				"index" : 0,
 				"order" : 0,
-				"text" : "ui_browse_properties_scheme_color",
-				"type" : "color",
-				"value" : "0.32549 0.41569 0.60784"
-			},
-			"---divider_eff---" :
-			{
-				"order" : 1,
-				"text" : "══════ 特效控制 ══════",
+				"text" : "══════ 主体 ══════",
 				"type" : "label"
 			},
-			"ca_strength" :
+			"main_opacity" :
 			{
-				"order" : 2,
-				"text" : "🌈 色差强度",
+				"order" : 1,
+				"text" : "🖼️ 主图亮度",
 				"type" : "slider",
-				"value" : 1.0,
+				"value" : 1.00,
 				"min" : 0.0,
-				"max" : 3.0
-			},
-			"ripple_strength" :
-			{
-				"order" : 3,
-				"text" : "🌊 水波强度",
-				"type" : "slider",
-				"value" : 0.12,
-				"min" : 0.0,
-				"max" : 0.5
-			},
-			"bloom_strength" :
-			{
-				"order" : 4,
-				"text" : "✨ Bloom发光",
-				"type" : "slider",
-				"value" : 1.0,
-				"min" : 0.0,
-				"max" : 3.0
+				"max" : 1.0
 			},
 			"---divider_rain---" :
 			{
-				"order" : 5,
+				"order" : 2,
 				"text" : "══════ 暴雨系统 ══════",
 				"type" : "label"
 			},
 			"rain_opacity" :
 			{
-				"order" : 6,
+				"order" : 3,
 				"text" : "🌧️ 雨量密度",
 				"type" : "slider",
 				"value" : 0.30,
 				"min" : 0.0,
 				"max" : 1.0
 			},
-			"rain_speed" :
-			{
-				"order" : 7,
-				"text" : "💨 雨速",
-				"type" : "slider",
-				"value" : 1.0,
-				"min" : 0.0,
-				"max" : 3.0
-			},
 			"---divider_audio---" :
 			{
-				"order" : 8,
+				"order" : 4,
 				"text" : "══════ 音频可视化 ══════",
 				"type" : "label"
 			},
-			"audio_amplitude" :
+			"audio1_opacity" :
 			{
-				"order" : 9,
-				"text" : "🎵 律动振幅",
+				"order" : 5,
+				"text" : "🔊 金色音频线 强度",
 				"type" : "slider",
 				"value" : 0.45,
 				"min" : 0.0,
-				"max" : 1.5
+				"max" : 2.0
 			},
-			"audio_line1_visible" :
+			"audio1_visible" :
 			{
-				"order" : 10,
-				"text" : "🔊 音频线1 (金色)",
+				"order" : 6,
+				"text" : "🔛 金色音频线 开关",
 				"type" : "bool",
 				"value" : true
 			},
-			"audio_line2_visible" :
+			"audio2_opacity" :
 			{
-				"order" : 11,
-				"text" : "🔊 音频线2 (白色)",
+				"order" : 7,
+				"text" : "🔊 白色音频线 强度",
+				"type" : "slider",
+				"value" : 0.21,
+				"min" : 0.0,
+				"max" : 2.0
+			},
+			"audio2_visible" :
+			{
+				"order" : 8,
+				"text" : "🔛 白色音频线 开关",
 				"type" : "bool",
 				"value" : true
 			},
 			"---divider_info---" :
 			{
-				"order" : 12,
+				"order" : 9,
 				"text" : "══════ 信息显示 ══════",
 				"type" : "label"
 			},
-			"show_date" :
-			{
-				"order" : 13,
-				"text" : "📅 显示日期",
-				"type" : "bool",
-				"value" : true
-			},
-			"show_music_info" :
-			{
-				"order" : 14,
-				"text" : "🎶 显示音乐信息",
-				"type" : "bool",
-				"value" : true
-			},
 			"show_clock" :
 			{
-				"order" : 15,
-				"text" : "🕐 显示时钟",
+				"order" : 10,
+				"text" : "🕐 时钟",
 				"type" : "bool",
 				"value" : true
 			},
-			"---divider_misc---" :
+			"show_date" :
 			{
-				"order" : 16,
-				"text" : "══════ 其他 ══════",
+				"order" : 11,
+				"text" : "📅 日期",
+				"type" : "bool",
+				"value" : true
+			},
+			"show_music" :
+			{
+				"order" : 12,
+				"text" : "🎶 歌曲名",
+				"type" : "bool",
+				"value" : true
+			},
+			"show_artist" :
+			{
+				"order" : 13,
+				"text" : "👤 艺术家",
+				"type" : "bool",
+				"value" : true
+			},
+			"---divider_fx---" :
+			{
+				"order" : 14,
+				"text" : "══════ 特效微调 ══════",
 				"type" : "label"
 			},
-			"bg_clear_color" :
+			"---note_fx---" :
 			{
-				"order" : 17,
-				"text" : "🎨 背景色",
-				"type" : "color",
-				"value" : "0.70000 0.70000 0.70000"
+				"order" : 15,
+				"text" : "💡 色差/水波/Bloom 参数请点击图层→效果进行微调",
+				"type" : "label"
 			}
 		},
 		"supportsaudioprocessing" : true

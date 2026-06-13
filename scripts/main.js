@@ -1,49 +1,64 @@
 'use strict';
-// 场景主控脚本 - 负责读取属性并控制场景元素
+// 场景主控脚本 - 所有控制真实生效
 
-// ---- 对象ID对照 ----
-var RAIN_LAYER = 30;
-var AUDIO1_LAYER = 69;
-var AUDIO2_LAYER = 112;
-var DATE_LAYER = 117;
-var MEDIA_CONTAINER = 166;
-var CLOCK_LAYER = 46;
+// ---- 图层ID对照 ----
+var LAYERS = {
+	main: 17,
+	rain: 30,
+	clock: 46,
+	audio1: 69,
+	audio2: 112,
+	date: 117,
+	musicContainer: 166,
+	songTitle: 171,
+	artist: 172
+};
 
 // ---- 读取属性 ----
 function getProp(name, def) {
 	try {
 		var v = engine.getPropertyValue(name);
-		return v !== undefined ? v : def;
+		return v !== undefined && v !== null ? v : def;
 	} catch (e) { return def; }
 }
 
-// ---- 应用所有属性（每帧执行） ----
+// ---- 每帧刷新所有控制 ----
 export function update(dt) {
 	try {
-		// 1. 雨量
+		// ===== 主体 =====
+		var mainOp = getProp('main_opacity', 1.0);
+		engine.setLayerOpacity(LAYERS.main, mainOp);
+
+		// ===== 暴雨 =====
 		var rainOp = getProp('rain_opacity', 0.30);
-		engine.setLayerOpacity(RAIN_LAYER, rainOp);
+		engine.setLayerOpacity(LAYERS.rain, rainOp);
 
-		// 2. 音频线可见性
-		var a1vis = getProp('audio_line1_visible', true);
-		var a2vis = getProp('audio_line2_visible', true);
-		engine.setLayerVisibility(AUDIO1_LAYER, a1vis);
-		engine.setLayerVisibility(AUDIO2_LAYER, a2vis);
+		// ===== 音频线 =====
+		var a1op = getProp('audio1_opacity', 0.45);
+		var a1vis = getProp('audio1_visible', true);
+		engine.setLayerOpacity(LAYERS.audio1, a1op);
+		engine.setLayerVisibility(LAYERS.audio1, a1vis);
 
-		// 3. 日期可见性
-		var dateVis = getProp('show_date', true);
-		engine.setLayerVisibility(DATE_LAYER, dateVis);
+		var a2op = getProp('audio2_opacity', 0.21);
+		var a2vis = getProp('audio2_visible', true);
+		engine.setLayerOpacity(LAYERS.audio2, a2op);
+		engine.setLayerVisibility(LAYERS.audio2, a2vis);
 
-		// 4. 音乐信息可见性
-		var musicVis = getProp('show_music_info', true);
-		engine.setLayerVisibility(MEDIA_CONTAINER, musicVis);
+		// ===== 信息显示 =====
+		var showClock = getProp('show_clock', true);
+		engine.setLayerVisibility(LAYERS.clock, showClock);
 
-		// 5. 时钟可见性
-		var clockVis = getProp('show_clock', true);
-		engine.setLayerVisibility(CLOCK_LAYER, clockVis);
+		var showDate = getProp('show_date', true);
+		engine.setLayerVisibility(LAYERS.date, showDate);
+
+		var showMusic = getProp('show_music', true);
+		engine.setLayerVisibility(LAYERS.songTitle, showMusic);
+
+		var showArtist = getProp('show_artist', true);
+		engine.setLayerVisibility(LAYERS.artist, showArtist);
 
 	} catch (e) {
-		// 忽略初始化时的错误
+		// 初始化时忽略错误
 	}
 }
 
